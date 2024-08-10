@@ -1,0 +1,59 @@
+#include<stdio.h>
+void main()
+{
+	int a[50],i,n,j,temp;
+	printf("enter the number of elements you want in an array:\n");
+	scanf("%d",&n);
+	printf("enter the array elements:\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n-1;i++)
+	{
+		for(j=0;j<n-1-i;j++)
+		{
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+			}
+		}
+	}
+	printf("sorted array is\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+	
+}
+
+
+
+OUTPUT:
+
+enter the number of elements you want in an array:
+6
+enter the array elements:
+100
+45
+12
+8
+56
+2000
+sorted array is
+8
+12
+45
+56
+100
+2000
+
+--------------------------------
+Process exited after 16.56 seconds with return value 6
+Press any key to continue . . .
+
+
+
+
